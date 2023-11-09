@@ -38,7 +38,7 @@ property_type_mapping = {
     "Residential Plot": 3
 }
 
-with open('house_prediction_model.pkl', 'rb') as f:
+with open('House.pkl', 'rb') as f:
     model = pickle.load(f)
 
 def predict(bed, bath, loc, size, status, face, Type):
