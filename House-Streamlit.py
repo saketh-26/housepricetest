@@ -71,6 +71,7 @@ if __name__ == '__main__':
     # Check if the button is clicked
     if submit_button:
         st.write(f"The predicted value is: {result} Lakhs")
+        st.markdown("<h2 style='color: blue;'>This is a larger text using st.markdown.</h2>", unsafe_allow_html=True)
 
     # Add an image to the second column (you need to specify the image URL)
     #col2.image('https://img.freepik.com/free-photo/blue-house-with-blue-roof-sky-background_1340-25953.jpg', use_column_width=True)
