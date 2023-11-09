@@ -4,6 +4,7 @@ import streamlit as st
 
 # Define global dictionaries for mappings
 location_mapping = {
+    "Kesarapalli":9,
     "Poranki": 8,
     "Kankipadu": 5,
     "Benz Circle": 0,
@@ -66,11 +67,17 @@ if __name__ == '__main__':
     Type = col1.selectbox("Select a Property Type", list(property_type_mapping.keys()))
 
     result = predict(bed, bath, loc, size, status, face, Type)
+    st.title("Submit")
+    submit_button = st.button("Submit")
+    # Check if the button is clicked
+    if submit_button:
+        st.success("Button clicked! Do something here.")
+        st.write(f"The predicted value is: {result} Lakhs")
 
     # Add an image to the second column (you need to specify the image URL)
-    col2.image('https://img.freepik.com/free-photo/blue-house-with-blue-roof-sky-background_1340-25953.jpg', use_column_width=True)
+    #col2.image('https://img.freepik.com/free-photo/blue-house-with-blue-roof-sky-background_1340-25953.jpg', use_column_width=True)
     
     # Display the predicted value in the first column
-    col2.write(f"The predicted value is: {result} Lakhs")
+    #col2.write(f"The predicted value is: {result} Lakhs")
 
     
