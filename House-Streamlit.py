@@ -67,11 +67,9 @@ if __name__ == '__main__':
     Type = col1.selectbox("Select a Property Type", list(property_type_mapping.keys()))
 
     result = predict(bed, bath, loc, size, status, face, Type)
-    st.title("Submit")
     submit_button = st.button("Submit")
     # Check if the button is clicked
     if submit_button:
-        st.success("Button clicked! Do something here.")
         st.write(f"The predicted value is: {result} Lakhs")
 
     # Add an image to the second column (you need to specify the image URL)
