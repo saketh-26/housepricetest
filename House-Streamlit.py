@@ -59,7 +59,7 @@ if __name__ == '__main__':
     col1, col2 = st.columns([2, 1])
 
     bed = col1.slider('No of Bedrooms', max_value=10, min_value=1, value=2)
-    bath = col1.slider('No of Bathrooms', max_value=7, min_value=0, value=2)
+    bath = col1.slider('No of Bathrooms', max_value=8, min_value=0, value=2)
     loc = col1.selectbox("Select a Location", list(location_mapping.keys()))
     size = col1.number_input('Enter the Sq Feet', max_value=10000, min_value=100, value=1000, step=500)
     status = col1.selectbox("Select a Status", list(status_mapping.keys()))
